@@ -8,7 +8,7 @@
 /************************************************************************************************************************************
 ES: 03
 La videoteca "Ciak film" necessita di un programma che carichi la lista film in un array di struttura e che stampi a video i 5 campi:
-numero, titolo film, genere, anno di uscita, disponibilit‡ film.
+numero, titolo film, genere, anno di uscita, disponibilit√† film.
 
 strtok(variabileStringa, simbolo/letteraConCuiSiDistruggeLaStringa); -- passando NULL
 fgets(varibilePerS[], lungMaxStringa, nomeFile);
@@ -36,7 +36,7 @@ int caricaTabella(Lista film[MAX_LUNG], int nMax, char nomeFile[]) {
         while(k < nMax && (fscanf(fp, "%d", film[k].numero) != EOF)) { // inizio a inserire il nome
                while(parola != NULL){
             strtok(parola, ','); // nel puntatore parola metto tutte le parole divise dalla , e le stampoman mano
-               } // finchÈ non vale null, e quindi vuol dire che vi Ë il carattere terminatore
+               } // finch√© non vale null, e quindi vuol dire che vi √® il carattere terminatore
             fscanf(fp, "%d", film[k].anno);
             fgets(film[k].disponibile, LUNG, fp); // variabile in cui vado a ficcare la stringa, lungezza massima della stringa, file
             k++;
