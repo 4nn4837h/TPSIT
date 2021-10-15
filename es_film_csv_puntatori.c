@@ -9,7 +9,7 @@
 Simondi Francesca IV A ROB
 ES: 03
 La videoteca "Ciak film" necessita di un programma che carichi la lista film in un array di struttura e che stampi a video i 5 campi:
-numero, titolo film, genere, anno di uscita, disponibilit‡ film.
+numero, titolo film, genere, anno di uscita, disponibilit√† film.
 
 strtok(variabileStringa, simbolo/letteraConCuiSiDistruggeLaStringa); -- passando NULL
 fgets(varibilePerS[], lungMaxStringa, nomeFile);
@@ -34,30 +34,30 @@ void caricaTabella(Lista film[MAX_LUNG], int nMax, char nomeFile[]) {
         int c = 0; // inizializzo la variabile per staccare i pezzi
         for( int k = 0; k < nMax; k++) {
             fgets(line, 100, fp); // prende tutta la linea comprendendo gli spazi: prende tutta la linea
-            printf("ciao"); // da qui in poi non funziona pi˘
+            printf("ciao"); // da qui in poi non funziona pi√π
             char* parola = strtok(line, ','); // la stringa parola prende ogni parola divisa dalla virgola
 
-            while(parola != NULL) { // finchÈ parola non vale NULL lo faccio
+            while(parola != NULL) { // finch√© parola non vale NULL lo faccio
                 switch(c) { // aumentando c, si cambia posto di destinazione partendo poi da parola
                 case 0:
-                    strcpy(*(film.numero + k), parola); // DESTINAZIONE, STRINGA DI PARTENZA
+                    strcpy((*(film + k)).numero, parola); // DESTINAZIONE, STRINGA DI PARTENZA
                     break;
                 case 1:
-                    strcpy(*(film + k).titolo, parola);
+                    strcpy((*(film + k))).titolo, parola);
                     break;
                 case 2:
-                    strcpy(*(film + k).genere, parola);
+                    strcpy((*(film + k)).genere, parola);
                     break;
                 case 3:
-                    strcpy(*(film + k).anno, parola);
+                    strcpy((*(film + k)).anno, parola);
                     break;
                 case 4:
-                    strcpy(*(film + k).disponibile, parola);
+                    strcpy((*(film + k)).disponibile, parola);
                     break;
                 }
                 c++;
             }
-            c = 0; // cosÏ mette c a zero, quindi la parola andr‡ messa nel numero
+            c = 0; // cos√¨ mette c a zero, quindi la parola andr√† messa nel numero
             //*parola = strtok(NULL, '.');
         }
         fclose(fp);
@@ -66,7 +66,7 @@ void caricaTabella(Lista film[MAX_LUNG], int nMax, char nomeFile[]) {
 
 void showTabella(Lista v[], int n) {
     for( int k = 0; k < n; k++) {
-        printf("%3s | %30s | %15s | %4s | %16s", *(v + k).numero, *(v + k).titolo, *(v + k).genere, *(v + k).anno, *(v + k).disponibile);
+        printf("%3s | %30s | %15s | %4s | %16s", (*(v + k)).numero, (*(v + k)).titolo, (*(v + k)).genere, (*(v + k)).anno, (*(v + k)).disponibile);
     }
 }
 
