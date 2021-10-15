@@ -43,7 +43,7 @@ void caricaTabella(Lista film[MAX_LUNG], int nMax, char nomeFile[]) {
                     strcpy((*(film + k)).numero, parola); // DESTINAZIONE, STRINGA DI PARTENZA
                     break;
                 case 1:
-                    strcpy((*(film + k))).titolo, parola);
+                    strcpy((*(film + k)).titolo, parola);
                     break;
                 case 2:
                     strcpy((*(film + k)).genere, parola);
