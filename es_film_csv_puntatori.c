@@ -33,7 +33,7 @@ void caricaTabella(Lista film[MAX_LUNG], int nMax, char nomeFile[]) {
     } else {
         int c = 0; // inizializzo la variabile per staccare i pezzi
         for( int k = 0; k < nMax; k++) {
-            fgets(line, 100, fp); // prende tutta la linea comprendendo gli spazi: prende tutta la linea
+            fgets(line, 150, fp); // prende tutta la linea comprendendo gli spazi: prende tutta la linea
             printf("ciao"); // da qui in poi non funziona più
             char* parola = strtok(line, ','); // la stringa parola prende ogni parola divisa dalla virgola
 
