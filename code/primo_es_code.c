@@ -1,14 +1,18 @@
-/* char scelta;
+/************************************************************************************************************************************
+SIMONDI FRANCESCA 4 A ROB - 21 / 01
+ES: 1 
+Implementare i metodi enqueue() e dequeue()  e creare un programma che permetta
+all'utente di riempire una coda di numeri interi di lunghezza arbitraria. Successivamente
+testare la funzione dequeue per svuotare la coda.
+
+char scelta;
         printf("Vuoi uscire dal programma?");
         scanf("%c", &scelta);
         if(scelta == 'S' || scelta == 's'){
             esci = true;
         }
-Implementare i metodi enqueue() e dequeue() e creare un programma che permetta
-all'utente di riempire una coda di numeri interi di lunghezza arbitraria. Successivamente
-testare la funzione dequeue per svuotare la coda.
-SIMONDI FRANCESCA 21 / 01
-*/
+
+************************************************************************************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
